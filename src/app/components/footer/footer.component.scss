@@ -1,0 +1,18 @@
+.footer {
+  background: #99aaa0;
+  color: white;
+  &-left {
+    position: absolute;
+  }
+  &-center {
+    margin: 0 auto;
+    a + a::before {
+      content: "|";
+      padding: 0 10px;
+    }
+  }
+  &-center > a {
+    text-decoration: none;
+    color: white;
+  }
+}

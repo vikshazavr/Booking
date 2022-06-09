@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { FooterComponent } from 'src/shared/footer/footer.component';
-import { HeaderComponent } from 'src/shared/header/header.component';
 import { AppComponent } from './app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { AllHotelsComponent } from './pages/all-hotels/all-hotels.component';
 import { HotelComponent } from './pages/hotel/hotel.component';
