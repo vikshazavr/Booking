@@ -6,8 +6,7 @@
     "app-booking": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:application": {
-          "strict": true,
+        "@schematics/angular:component": {
           "style": "scss"
         }
       },
@@ -97,6 +96,11 @@
           }
         }
       }
+    }
+  },
+  "cli": {
+    "warnings": {
+      "versionMismatch": false
     }
   }
 }

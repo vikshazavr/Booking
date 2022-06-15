@@ -5,11 +5,12 @@ import { BookingsComponent } from './pages/bookings/bookings.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { ProfileComponent } from './profile.component';
 
-const router: Routes = [
+const route: Routes = [
   {
     path: '',
     component: ProfileComponent,
     children: [
+      { path: '', redirectTo: 'account', pathMatch: 'full' },
       { path: 'account', component: AccountComponent },
       { path: 'bookings', component: BookingsComponent },
       { path: 'review', component: ReviewsComponent },
@@ -24,7 +25,7 @@ const router: Routes = [
     BookingsComponent,
     ReviewsComponent,
   ],
-  imports: [RouterModule.forChild(router)],
+  imports: [RouterModule.forChild(route)],
   providers: [],
 })
 export class ProfileModule {}

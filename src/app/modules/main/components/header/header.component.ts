@@ -8,5 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
   constructor() {}
 
+  nameUser: string = 'Nik Obraien';
   ngOnInit(): void {}
 }
