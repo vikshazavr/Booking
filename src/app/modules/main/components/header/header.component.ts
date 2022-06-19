@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/shared/services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  public fullName: string = '';
+  constructor(private userSvc: UserService) {
+    this.userSvc
+      .getUser()
+      .subscribe(
+        (value) => (this.fullName = `${value?.firstName!} ${value?.lastName}`)
+      );
+  }
 
-  nameUser: string = 'Nik Obraien';
   ngOnInit(): void {}
 }
