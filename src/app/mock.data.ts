@@ -3,5 +3,4 @@ export const USER_CONFIG = {
   password: '',
   firstName: '',
   lastName: '',
-  email: '',
 };

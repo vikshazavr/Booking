@@ -3,4 +3,9 @@ button {
   background: #f4a45f;
   padding: 10px 25px;
   color: white;
+  &:hover {
+    color: #505050;
+    background: #fff;
+    border: 1px solid#505050;
+  }
 }

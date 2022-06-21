@@ -36,13 +36,9 @@ export class RegistrationComponent implements OnInit {
         Validators.required,
         Validators.minLength(5),
       ]),
-      secondName: new UntypedFormControl('', [
+      lastName: new UntypedFormControl('', [
         Validators.required,
         Validators.minLength(5),
-      ]),
-      email: new UntypedFormControl('', [
-        Validators.required,
-        Validators.email,
       ]),
       login: new UntypedFormControl('', [
         Validators.required,

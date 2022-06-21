@@ -1,8 +1,8 @@
-import { ReactiveFormsModule } from '@angular/forms';
-import { ButtonSuccessModule } from './../../../../shared/components/button-success/button-success.module';
+import { AuthHeaderModule } from './../components/header/auth.header.module';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login.component';
-import { Routes, RouterModule } from '@angular/router';
 
 const route: Routes = [
   {
@@ -14,9 +14,9 @@ const route: Routes = [
 @NgModule({
   declarations: [LoginComponent],
   imports: [
-    ButtonSuccessModule,
     RouterModule.forChild(route),
     ReactiveFormsModule,
+    AuthHeaderModule,
   ],
 })
 export class LoginModule {}

@@ -1,15 +1,23 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label>Login</label>
-    <input class="form-control" name="login" formControlName="login" />
+<app-auth-header></app-auth-header>
+<div class="content">
+  <div class="form">
+    <div class="form-content">
+      <p>{{buttonLabels.LOGIN}}</p>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Login</label>
+          <input class="form-control" name="login" formControlName="login" placeholder="login" />
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input class="form-control" type="password" name="password" formControlName="password"
+            placeholder="password" />
+        </div>
+        <button type="submit" class="btn" [disabled]="!form.valid">{{buttonLabels.LOGIN}}</button>
+      </form>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input class="form-control" type="password" name="password" formControlName="password" />
+  <div class="banner">
+    <img src="../../../../assets/images/auth-banner.png" alt="Banner">
   </div>
-  <div class="form-group">
-    <button type="submit" style="width: 100px; border: 1px solid #ccc"
-      [disabled]="!form.valid">{{buttonLabels.LOGIN}}</button>
-  </div>
-</form>
-<a class="auth-container-form-inputs-switch__element" routerLink="../registration">registration</a>
+</div>

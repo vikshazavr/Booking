@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { RegistrationComponent } from './registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { AuthHeaderModule } from './../components/header/auth.header.module';
+import { RegistrationComponent } from './registration.component';
 
 const route: Routes = [
   {
@@ -12,6 +13,10 @@ const route: Routes = [
 
 @NgModule({
   declarations: [RegistrationComponent],
-  imports: [RouterModule.forChild(route), ReactiveFormsModule],
+  imports: [
+    RouterModule.forChild(route),
+    ReactiveFormsModule,
+    AuthHeaderModule,
+  ],
 })
 export class RegistrationModule {}
