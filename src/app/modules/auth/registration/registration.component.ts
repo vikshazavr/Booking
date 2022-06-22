@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import {
   UntypedFormControl,
   UntypedFormGroup,
@@ -14,17 +20,23 @@ import { UserService } from 'src/shared/services/user.service';
   styleUrls: ['./registration.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RegistrationComponent implements OnInit {
+export class RegistrationComponent implements OnInit, OnDestroy {
+  private subscription: Subscription = new Subscription();
   public buttonLabels = ButtonLabels;
   public form!: UntypedFormGroup;
   constructor(private router: Router, private userSvc: UserService) {
-    this.redirectToHotels();
+    if (localStorage.getItem('login')) {
+      this.redirectToHotels();
+    }
   }
 
   ngOnInit(): void {
     this.form = this.initForm();
   }
 
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
   public onSubmit() {
     this.userSvc.addUser(this.form.value);
     this.redirectToHotels();
@@ -52,10 +64,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   private redirectToHotels() {
-    this.userSvc.getUser().subscribe((val) => {
-      if (val !== null) {
-        this.router.navigateByUrl('/hotels');
-      }
-    });
+    this.router.navigateByUrl('/hotels');
   }
 }

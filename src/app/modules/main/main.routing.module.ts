@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { NotFoundComponent } from '../page-status-code/not-found.component';
 
 const routes: Routes = [
   {
