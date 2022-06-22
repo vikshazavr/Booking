@@ -1,3 +1,8 @@
 <p>all-hotels works!</p>
+<a routerLink="../registration">registration</a>
+<a routerLink="../login">login</a>
 <app-datepicker></app-datepicker>
 <app-autocomplete></app-autocomplete>
+<ng-container *ngFor="let hotel of hotels">
+  <app-card-hotel [hotel]="hotel"></app-card-hotel>
+</ng-container>
