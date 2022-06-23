@@ -1,6 +1,22 @@
 <div class="card-container">
-  <img style="width: 100px" src="{{hotel.image}}" alt="image">
-  <p>{{hotel.city}}</p>
-  <p>{{hotel.country}}</p>
-  <p>{{hotel.description}}</p>
+  <img class="card-hotel-image" src="{{hotel.image}}" alt="image">
+  <div class="card-right-content">
+    <div class="card-right-content-up">
+      <div>
+        <p class="card-name-hotel">{{hotel.city}}</p>
+        <p class="card-adress" style="padding-right: 20px;">{{hotel.country}}, {{hotel.city}}, {{hotel.street}}
+          {{hotel.houseNumber}}</p>
+      </div>
+      <div>
+        <p class="hotel-rating">9.0</p>
+      </div>
+    </div>
+    <div class="card-right-content-down">
+      <div class="card-right-content-down-column">
+        <h2 class="card-right-content-down-column-price">{{roomPrice | currency: 'USD' }}</h2>
+        <app-button-success [label]="label" (click)="redirectToHotelById(hotel.id)"></app-button-success>
+      </div>
+    </div>
+  </div>
+
 </div>

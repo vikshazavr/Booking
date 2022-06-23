@@ -1,0 +1,33 @@
+.about-hotel {
+  width: 80%;
+  border: 1px solid #505050;
+  margin: 20px auto;
+  display: flex;
+  &-container {
+    padding: 25px 30px;
+  }
+}
+img {
+  color: red;
+}
+.about-hotel > img {
+  width: 40%;
+}
+.hotel-room {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+  border: 1px solid #505050;
+  margin: 0 auto;
+
+  &-content {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+
+.width-colomn {
+  width: 14%;
+  padding: 0 3%;
+}

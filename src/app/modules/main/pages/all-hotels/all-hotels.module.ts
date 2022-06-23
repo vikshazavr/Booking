@@ -6,6 +6,7 @@ import { AutocompleteModule } from 'src/shared/components/autocomplete/autocompl
 import { DatepickerModule } from 'src/shared/components/datepicker/datepicker.module';
 import { AllHotelsComponent } from './all-hotels.component';
 import { CardHotelModule } from 'src/shared/components/card-hotel/card-hotel.module';
+import { getPriceByHotelIdPipe } from 'src/shared/pipes/get-price-by-hotel-id.pipe';
 
 const route: Routes = [
   {
@@ -13,7 +14,7 @@ const route: Routes = [
     component: AllHotelsComponent,
     children: [
       {
-        path: 'hotel',
+        path: 'hotel/:id',
         component: HotelComponent,
       },
     ],
@@ -21,7 +22,7 @@ const route: Routes = [
 ];
 
 @NgModule({
-  declarations: [AllHotelsComponent],
+  declarations: [AllHotelsComponent, getPriceByHotelIdPipe],
   imports: [
     DatepickerModule,
     AutocompleteModule,

@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { IRoom } from './../../interfaces/room.interface';
 import { Component, Input, OnInit } from '@angular/core';
 import { IHotel } from './../../interfaces/hotel.interface';
 
@@ -8,7 +10,15 @@ import { IHotel } from './../../interfaces/hotel.interface';
 })
 export class CardHotelComponent implements OnInit {
   @Input() hotel!: IHotel;
-  constructor() {}
+  @Input() roomPrice!: IRoom['price'];
+  public label: string = 'Reserve';
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
+
+  redirectToHotelById(id: number) {
+    console.log(111);
+
+    this.router.navigateByUrl(`/hotel/${id}`);
+  }
 }

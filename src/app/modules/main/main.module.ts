@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
+import { FooterModule } from './components/footer/footer.module';
+import { HeaderModule } from './components/header/header.module';
 import { MainComponent } from './main.component';
 import { MainRoutingModule } from './main.routing.module';
-import { HotelComponent } from './pages/hotel/hotel.component';
-
 @NgModule({
-  declarations: [
-    MainComponent,
-    HeaderComponent,
-    FooterComponent,
-    HotelComponent,
-  ],
-  imports: [MainRoutingModule],
+  declarations: [MainComponent],
+  imports: [MainRoutingModule, HeaderModule, FooterModule],
 })
 export class MainModule {}

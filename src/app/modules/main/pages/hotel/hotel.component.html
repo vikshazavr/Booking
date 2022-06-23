@@ -1,1 +1,25 @@
-<p>hotel works!</p>
+<div class="about-hotel">
+  <img [src]="hotel.image">
+  <div class="about-hotel-container">
+    <h2>{{hotel.name}}</h2>
+    <p>{{hotel.country}},{{hotel.city}},{{hotel.street}},{{hotel.houseNumber}}</p>
+    <p>{{hotel.description}}</p>
+  </div>
+</div>
+
+<div class="hotel-room">
+  <div class="hotel-room-content">
+    <p class="width-colomn">Photo</p>
+    <p class="width-colomn">Type</p>
+    <p class="width-colomn">Sleeps</p>
+    <p class="width-colomn">Price</p>
+    <p class="width-colomn">Reserve</p>
+  </div>
+  <div class="hotel-room-content" *ngFor="let room of rooms">
+    <img class="width-colomn" [src]="room.image">
+    <p class="width-colomn">{{room.type}}</p>
+    <p class="width-colomn">{{room.sleeps}} people</p>
+    <p class="width-colomn">{{room.price | currency: 'USD' }}</p>
+    <app-button-success class="width-colomn" [label]="label"></app-button-success>
+  </div>
+</div>

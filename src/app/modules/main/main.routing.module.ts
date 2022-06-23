@@ -23,6 +23,11 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'hotel/:id',
+        loadChildren: () =>
+          import('./pages/hotel/hotel.module').then((m) => m.HotelModule),
+      },
+      {
         path: 'profile',
         loadChildren: () =>
           import('./pages/profile/profile.module').then((m) => m.ProfileModule),

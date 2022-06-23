@@ -1,8 +1,11 @@
-<p>all-hotels works!</p>
-<a routerLink="../registration">registration</a>
-<a routerLink="../login">login</a>
-<app-datepicker></app-datepicker>
-<app-autocomplete></app-autocomplete>
-<ng-container *ngFor="let hotel of hotels">
-  <app-card-hotel [hotel]="hotel"></app-card-hotel>
-</ng-container>
+<div class="container"><a routerLink="../registration">registration</a>
+  <a routerLink="../login">login</a>
+  <app-datepicker></app-datepicker>
+  <app-autocomplete></app-autocomplete>
+</div>
+<div class="hotels-container">
+  <div *ngFor="let hotel of hotels; let i = index">
+    <app-card-hotel [hotel]="hotel" [roomPrice]="pricePerHotel | getPriceByHotelId: hotel.id">
+    </app-card-hotel>
+  </div>
+</div>

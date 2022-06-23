@@ -1,5 +1,55 @@
-.card-container {
-  width: 600px;
-  height: 200px;
-  border: 1px solid #000;
+.card {
+  &-container {
+    display: flex;
+    width: 660px;
+    height: 200px;
+    border: 1px solid #505050;
+  }
+  &-right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    &-up {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-down {
+      display: flex;
+      justify-content: flex-end;
+      &-column {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &-price {
+          text-align: right;
+        }
+      }
+    }
+  }
+  &-hotel-image {
+    width: 250px;
+    height: 200px;
+  }
+  &-name-hotel {
+    font-weight: 400;
+    font-size: 22px;
+  }
+  &-adress {
+    font-weight: 300;
+    font-size: 14px;
+  }
+}
+.hotel {
+  &-rating {
+    margin-left: 60px;
+    background: #99aaa0;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &-price {
+    margin-bottom: 5px;
+  }
 }

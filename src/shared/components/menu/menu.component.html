@@ -1,0 +1,13 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon><img style="margin:4px;" src="../../../assets/images/arrow-down-icon.svg" alt=""></mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon><img src="../../../assets/images/profile-icon.svg" alt=""></mat-icon>
+    <span>Profile</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon><img src="../../../assets/images/logout-icon.svg" alt=""></mat-icon>
+    <span>Sign out</span>
+  </button>
+</mat-menu>

@@ -48,7 +48,7 @@ export const HOTELS: IHotel[] = [
   },
 ];
 
-export const ROOM: IRoom[] = [
+export const ROOMS: IRoom[] = [
   {
     hotelId: 1,
     type: 'Standard Double Room',
