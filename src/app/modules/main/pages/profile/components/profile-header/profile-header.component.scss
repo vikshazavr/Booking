@@ -1,0 +1,13 @@
+.profile-link {
+  min-width: 100px;
+  margin: 0 auto;
+  & > a {
+    padding: 0 20px;
+    text-decoration: none;
+  }
+}
+.profile-link .active-link {
+  color: #f4a45f;
+  // display: flex;
+  // flex-direction: column;
+}

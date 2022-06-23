@@ -2,10 +2,14 @@
   <mat-icon><img style="margin:4px;" src="../../../assets/images/arrow-down-icon.svg" alt=""></mat-icon>
 </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <mat-icon><img src="../../../assets/images/profile-icon.svg" alt=""></mat-icon>
-    <span>Profile</span>
-  </button>
+  <a routerLink="../profile">
+    <button mat-menu-item>
+      <mat-icon><img src="../../../assets/images/profile-icon.svg" alt=""></mat-icon>
+      <span>
+        Profile
+      </span>
+    </button>
+  </a>
   <button mat-menu-item>
     <mat-icon><img src="../../../assets/images/logout-icon.svg" alt=""></mat-icon>
     <span>Sign out</span>

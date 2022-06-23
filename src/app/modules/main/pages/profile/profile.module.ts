@@ -1,3 +1,4 @@
+import { ProfileHeaderModule } from './components/profile-header/profile-header.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountComponent } from './pages/account/account.component';
@@ -13,7 +14,7 @@ const route: Routes = [
       { path: '', redirectTo: 'account', pathMatch: 'full' },
       { path: 'account', component: AccountComponent },
       { path: 'bookings', component: BookingsComponent },
-      { path: 'review', component: ReviewsComponent },
+      { path: 'reviews', component: ReviewsComponent },
     ],
   },
 ];
@@ -25,7 +26,7 @@ const route: Routes = [
     BookingsComponent,
     ReviewsComponent,
   ],
-  imports: [RouterModule.forChild(route)],
+  imports: [RouterModule.forChild(route), ProfileHeaderModule],
   providers: [],
 })
 export class ProfileModule {}

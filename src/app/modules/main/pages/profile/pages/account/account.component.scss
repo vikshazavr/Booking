@@ -1,0 +1,44 @@
+.content {
+  border: 1px solid #505050;
+  width: 80%;
+  margin: 20px auto;
+}
+.buttons {
+  display: flex;
+}
+input {
+  height: 44px;
+  margin-top: 8px;
+  width: 280px;
+  outline: none;
+  padding-left: 14px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  &::placeholder {
+    color: #bfbfbf;
+    font-weight: 300;
+  }
+}
+
+p {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.form {
+  display: flex;
+  margin: 0 auto;
+  &-group {
+    margin: 25px 0;
+  }
+  &-content {
+    margin: auto;
+  }
+  &-content > a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #0068c8;
+  }
+}
