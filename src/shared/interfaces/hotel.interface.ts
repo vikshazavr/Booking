@@ -6,6 +6,6 @@ export interface IHotel {
   country: string;
   city: string;
   street: string;
-  houseNumber: number;
+  house: number;
   image: string;
 }

@@ -16,7 +16,7 @@ export const HOTELS: IHotel[] = [
     country: 'South Africa',
     city: 'Durban',
     street: 'Snell Parade',
-    houseNumber: 175,
+    house: 175,
     image:
       'https://cf.bstatic.com/xdata/images/hotel/max1280x900/233371734.jpg?k=6947fb9d8cb5304aab445c8041c30c8296c2df5be70db8aed6634c292064bc63&o=&hp=1',
   },
@@ -29,7 +29,7 @@ export const HOTELS: IHotel[] = [
     country: 'South Africa',
     city: 'Durban',
     street: 'Snell Parade',
-    houseNumber: 173,
+    house: 173,
     image:
       'https://cf.bstatic.com/xdata/images/hotel/max1280x900/20215163.jpg?k=2a56b14af3ac53d9cf04f58935d20108b53973ad3856b4053c05c8b8d78b91a8&o=&hp=1',
   },
@@ -42,7 +42,7 @@ export const HOTELS: IHotel[] = [
     country: 'South Africa',
     city: 'Durban',
     street: 'Battery Beach Road',
-    houseNumber: 20,
+    house: 20,
     image:
       'https://cf.bstatic.com/xdata/images/hotel/max1280x900/17771563.jpg?k=5eb618f50bf8e9dd4efcef585d9e7afbdb46fd9cd825267a5946042c81dba48b&o=&hp=1',
   },

@@ -1,8 +1,8 @@
-<div class="about-hotel">
+<div class="about-hotel" *ngIf="hotel">
   <img [src]="hotel.image">
   <div class="about-hotel-container">
     <h2>{{hotel.name}}</h2>
-    <p>{{hotel.country}},{{hotel.city}},{{hotel.street}},{{hotel.houseNumber}}</p>
+    <p>{{hotel.country}},{{hotel.city}},{{hotel.street}},{{hotel.house}}</p>
     <p>{{hotel.description}}</p>
   </div>
 </div>

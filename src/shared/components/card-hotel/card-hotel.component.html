@@ -1,11 +1,11 @@
 <div class="card-container">
-  <img class="card-hotel-image" src="{{hotel.image}}" alt="image">
+  <img class="card-hotel-image" [src]="hotel.image" alt="image">
   <div class="card-right-content">
     <div class="card-right-content-up">
       <div>
         <p class="card-name-hotel">{{hotel.city}}</p>
         <p class="card-adress" style="padding-right: 20px;">{{hotel.country}}, {{hotel.city}}, {{hotel.street}}
-          {{hotel.houseNumber}}</p>
+          {{hotel.house}}</p>
       </div>
       <div>
         <p class="hotel-rating">9.0</p>
