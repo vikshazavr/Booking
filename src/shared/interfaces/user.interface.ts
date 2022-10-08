@@ -9,5 +9,6 @@ export interface ILoginInfo {
 }
 
 export interface IUserInfo extends IUser, ILoginInfo {
+  id: string;
   // avatar: string;
 }

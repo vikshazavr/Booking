@@ -1,6 +1,7 @@
 .content {
   border: 1px solid #505050;
   width: 80%;
+  height: 500px;
   margin: 20px auto;
 }
 .buttons {
@@ -8,7 +9,6 @@
 }
 input {
   height: 44px;
-  margin-top: 8px;
   width: 280px;
   outline: none;
   padding-left: 14px;
@@ -28,9 +28,14 @@ p {
 }
 .form {
   display: flex;
-  margin: 0 auto;
+  margin: 50px auto;
   &-group {
-    margin: 25px 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    label {
+      margin: auto 10px;
+    }
   }
   &-content {
     margin: auto;
@@ -40,5 +45,16 @@ p {
     text-align: center;
     text-decoration: none;
     color: #0068c8;
+  }
+}
+.btn {
+  display: flex;
+  border: none;
+  padding: 12px 70px;
+  background: #f4a45f;
+  color: #fff;
+
+  &:disabled {
+    opacity: 0.6;
   }
 }

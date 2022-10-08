@@ -1,11 +1,23 @@
-<div class="container"><a routerLink="../registration">registration</a>
-  <a routerLink="../login">login</a>
+<div class="container">
   <app-datepicker></app-datepicker>
   <app-autocomplete></app-autocomplete>
+  <app-autocomplete></app-autocomplete>
+  <div class="rating">
+    <div class="rating-reviews">5</div>
+    <div class="rating-reviews">6</div>
+    <div class="rating-reviews">7</div>
+    <div class="rating-reviews">8</div>
+    <div class="rating-reviews">9</div>
+  </div>
 </div>
-<div class="hotels-container">
-  <div *ngFor="let hotel of hotels; let i = index">
-    <app-card-hotel [hotel]="hotel" [roomPrice]="pricePerHotel | getPriceByHotelId: hotel.id">
-    </app-card-hotel>
+<div class="content">
+  <div class="filter">
+    <p>Filter</p>
+  </div>
+  <div class="hotels-container">
+    <div *ngFor="let hotel of hotels; let i = index">
+      <app-card-hotel [hotel]="hotel" [roomPrice]="pricePerHotel | getPriceByHotelId: hotel.id">
+      </app-card-hotel>
+    </div>
   </div>
 </div>

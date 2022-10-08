@@ -8,6 +8,9 @@ import { ILoginInfo, IUserInfo } from '../interfaces/user.interface';
   providedIn: 'root',
 })
 export class UserService implements OnDestroy {
+  subscribe() {
+    throw new Error('Method not implemented.');
+  }
   private userInfos: IUserInfo[] = [];
   private readonly user$ = new BehaviorSubject<IUserInfo | null>(null);
   private subscription: Subscription = new Subscription();
@@ -32,7 +35,7 @@ export class UserService implements OnDestroy {
     const subscription = this.httpClient
       .post<IUserInfo[]>('https://62af3aea3bbf46a3521e932f.mockapi.io/users', {
         ...this.userInfos,
-        ...{ id: this.userInfos.length, ...user },
+        ...{ ...user, id: this.userInfos.length },
       })
       .subscribe();
 
@@ -80,5 +83,10 @@ export class UserService implements OnDestroy {
         }
       });
     this.subscription.add(subscription);
+  }
+  logOut() {
+    localStorage.removeItem('login');
+    this.user$.next(null);
+    this.router.navigateByUrl('/login');
   }
 }

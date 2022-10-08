@@ -7,9 +7,6 @@
     padding: 25px 30px;
   }
 }
-img {
-  color: red;
-}
 .about-hotel > img {
   width: 40%;
 }
@@ -19,15 +16,26 @@ img {
   gap: 10px;
   width: 80%;
   border: 1px solid #505050;
-  margin: 0 auto;
+  margin: 20px auto;
 
   &-content {
     display: flex;
-    margin-top: 20px;
+    padding-top: 30px;
   }
 }
 
 .width-colomn {
   width: 14%;
   padding: 0 3%;
+}
+
+.room-content {
+  margin-bottom: 30px;
+}
+.description {
+  font-weight: 500;
+}
+.place {
+  font-size: 14px;
+  margin: 8px 0 20px;
 }

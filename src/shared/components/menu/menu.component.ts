@@ -1,3 +1,4 @@
+import { UserService } from './../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  constructor() {}
-
+  constructor(private userSvr: UserService) {}
+  logOut() {
+    this.userSvr.logOut();
+  }
   ngOnInit(): void {}
 }

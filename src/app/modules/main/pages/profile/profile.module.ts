@@ -1,3 +1,4 @@
+import { AccountModule } from './pages/account/account.module';
 import { ProfileHeaderModule } from './components/profile-header/profile-header.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,13 +21,8 @@ const route: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    ProfileComponent,
-    AccountComponent,
-    BookingsComponent,
-    ReviewsComponent,
-  ],
-  imports: [RouterModule.forChild(route), ProfileHeaderModule],
+  declarations: [ProfileComponent, BookingsComponent, ReviewsComponent],
+  imports: [RouterModule.forChild(route), ProfileHeaderModule, AccountModule],
   providers: [],
 })
 export class ProfileModule {}
